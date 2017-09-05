@@ -56,6 +56,8 @@ MVP(Model-View_Presenter)，通过一个抽象的View接口，不是真正的Vie
   alt="usite" height="476" width="960"/>
 </p>
 这种架构是对MVP的一种补充，主要区别是加了一层Domain Layer和User Cases，把原本Presenter中臃肿的逻辑代码移入到了Domain Layer中，减轻了Presenter的体量，而use cases定义了每个业务的具体操作，细化了业务粒度。
+
+
 [MVP-Clean_Demo](https://github.com/googlesamples/android-architecture/tree/todo-mvp-clean/)
 
 
@@ -76,6 +78,8 @@ MVVM(Model-View-ViewModel)思想是跟MVP类似，但是是为了更进一步解
 * 利用团队协作，一个写UI，一个写业务。
  ### 缺点：
  * 学习成本略高。
+ 
+ 
  [MVVM-Demo](https://github.com/googlesamples/android-architecture/tree/todo-mvvm-databinding/)
 
 
