@@ -42,7 +42,7 @@ MVP(Model-View_Presenter)，通过一个抽象的View接口，不是真正的Vie
 * View层和Presenter层还有一定的耦合度，View层某个UI元素更，那么对于的接口也必须改。
 
 
-## Clean
+## MVP-Clean
 <p align="center">
   <img src="https://github.com/chenjishi/TechBlog/blob/master/clean_architecture.png?raw=true" 
   alt="usite" height="440" width="647"/>
@@ -51,6 +51,7 @@ MVP(Model-View_Presenter)，通过一个抽象的View接口，不是真正的Vie
   <img src="https://github.com/chenjishi/TechBlog/blob/master/clean.png?raw=true" 
   alt="usite" height="476" width="960"/>
 </p>
+这种架构是对MVP的一种补充，主要区别是加了一层Domain Layer和User Cases，把原本Presenter中臃肿的逻辑代码移入到了Domain Layer中，减轻了Presenter的体量，而use cases定义了每个业务的具体操作，细化了业务粒度。
 
 
 
