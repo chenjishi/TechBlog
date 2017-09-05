@@ -39,6 +39,7 @@ MVP(Model-View_Presenter)，通过一个抽象的View接口，不是真正的Vie
 * 对于比较复杂的业务，Presenter模式无法解决臃肿的问题。
 * 对于多个View的场景，需要多个Presenter去实现。
 * 额外的代码复杂度和学习成本。
+* View层和Presenter层还有一定的耦合度，View层某个UI元素更，那么对于的接口也必须改。
 
 
 
