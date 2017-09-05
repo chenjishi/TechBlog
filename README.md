@@ -20,7 +20,7 @@ MVC(Model-View-Controller)是一种自70年代以来就出现的为响应式UI�
 ## MVP
 <p align="center">
   <img src="https://github.com/chenjishi/TechBlog/blob/master/mvp.png?raw=true" 
-  alt="usite" height="369" width="960"/>
+  alt="usite" height="562" width="960"/>
 </p>
 
 
