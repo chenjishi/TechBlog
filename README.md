@@ -15,13 +15,19 @@ MVC(Model-View-Controller)是一种自70年代以来就出现的为响应式UI�
 这种分层架构本身没有太大的问题，但是随着业务不断迭代，我们慢慢发现了很多问题：
 
 * 由于Android View作为视图的功能太弱，我们大量处理View的逻辑只能写在Activity, Activity充当了Controller和View的角色，里面导致Activity变得臃肿和难以维护，直接导致Activity大爆炸，比如说我们的BrowserActivity和设置Activity，一个类成千上万行代码的情况出现了。
-* 业务代码跟UI糅杂在一起，无法拆分重用，导致单元测试在Android平台上根本无法进行，同时逻辑不清晰，难以维护。
+* 耦合太紧密，业务代码跟UI糅杂在一起，无法拆分重用，导致单元测试在Android平台上根本无法进行，同时逻辑不清晰，难以维护。
 
 ## MVP
 <p align="center">
   <img src="https://github.com/chenjishi/TechBlog/blob/master/mvp.png?raw=true" 
   alt="usite" height="562" width="960"/>
 </p>
+
+MVP(Model-View_Presenter)，通过一个抽象的View接口，不是真正的View层将Presenter和真正的View进行解耦，Presenter持有View接口，对接口进行操作，而不是直接操作View层，View层也可以持有Presenter接口，对Presenter发送命令，比如更新数据等等。这样把视图操作和业务逻辑解耦，从而让Activity成为真正的View层。
+
+### 优点：
+* 
+* 
 
 
 
