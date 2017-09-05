@@ -44,11 +44,11 @@ MVP(Model-View_Presenter)，通过一个抽象的View接口，不是真正的Vie
 
 ## Clean
 <p align="center">
-  <img src="https://github.com/chenjishi/TechBlog/blob/master/clean_architecture?raw=true" 
+  <img src="https://github.com/chenjishi/TechBlog/blob/master/clean_architecture.png?raw=true" 
   alt="usite" height="653" width="960"/>
 </p>
 <p align="center">
-  <img src="https://github.com/chenjishi/TechBlog/blob/master/clean?raw=true" 
+  <img src="https://github.com/chenjishi/TechBlog/blob/master/clean.png?raw=true" 
   alt="usite" height="476" width="960"/>
 </p>
 
