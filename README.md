@@ -42,5 +42,15 @@ MVP(Model-View_Presenter)，通过一个抽象的View接口，不是真正的Vie
 * View层和Presenter层还有一定的耦合度，View层某个UI元素更，那么对于的接口也必须改。
 
 
+## Clean
+<p align="center">
+  <img src="https://github.com/chenjishi/TechBlog/blob/master/clean_architecture?raw=true" 
+  alt="usite" height="653" width="960"/>
+</p>
+<p align="center">
+  <img src="https://github.com/chenjishi/TechBlog/blob/master/clean?raw=true" 
+  alt="usite" height="476" width="960"/>
+</p>
+
 
 
