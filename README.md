@@ -54,4 +54,11 @@ MVP(Model-View_Presenter)，通过一个抽象的View接口，不是真正的Vie
 这种架构是对MVP的一种补充，主要区别是加了一层Domain Layer和User Cases，把原本Presenter中臃肿的逻辑代码移入到了Domain Layer中，减轻了Presenter的体量，而use cases定义了每个业务的具体操作，细化了业务粒度。
 
 
+## MVVM
+<p align="center">
+  <img src="https://github.com/chenjishi/TechBlog/blob/master/mvvm-databinding.png?raw=true" 
+  alt="usite" height="324" width="761"/>
+</p>
+
+
 
