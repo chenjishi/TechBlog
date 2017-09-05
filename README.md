@@ -1,4 +1,4 @@
-# Android结构概览
+# Android架构概览
 
 ## 1.MVC
 <p align="center">
