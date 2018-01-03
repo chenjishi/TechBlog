@@ -44,7 +44,7 @@ getActivity().enterPictureInPictureMode()
 
 * 支持通知栏背景颜色设置，比如一些紧急通知可以设置颜色与其他普通通知区分开来。
 
-### 2)Auto Fill
+### 3)Auto Fill
 
 <img src="https://raw.githubusercontent.com/googlesamples/android-AutofillFramework/master/screenshots/2_SampleLoginEditTexts.png" width="270" height="480"/>
 
@@ -53,11 +53,18 @@ getActivity().enterPictureInPictureMode()
 * 支持自定义View接入Auto Fill服务。
 * 支持网站数据和app数据联通。
 
-### 2)Downloadable fonts
+### 4)Downloadable fonts
 可下载字体，不需要将字体打包进apk，同时还可以实现多app共享字体，Android Support Library 26也支持此特性。
 <img src="https://developer.android.com/guide/topics/ui/images/look-and-feel/downloadable-fonts/downloadable-fonts-process.png" width="371" height="355"/>
 
 xml可以通过android:fontFamily设置字体。
+
+### 5)Adaptive Icons
+
+可以对不同的设备设置不同的图标样式，比如有的机型可以设置成圆形图标，有的可以设置方形图标，并且支持图标动画。
+
+<img src="https://developer.android.com/guide/practices/ui_guidelines/images/Single_Icon_Parallax_Demo_01_2x_ext.gif"
+width="311" height="311"/>
 
 
 
