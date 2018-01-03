@@ -33,6 +33,9 @@ getActivity().enterPictureInPictureMode()
 
 通过PictureInPitureParams进行PIP的调整，比如视频比例的更新，用户点击home或者recent按钮，或者进入、退出PIP模式Activity或者Fragment都会有回调，通知用户更新UI。处于PIP模式的时候系统会调用Activity的onPause方法，此时不应该暂停视频播放，真正暂停或者恢复播放的时机应该是在onStop和onStart方法里面，如果非要在onPause的时候暂停，需要调用isInPictureInPictureMode方法判断当前是否在PIP模式。
 
+### 2)Notification Channel
+
+
 
 
 # Android架构概览
