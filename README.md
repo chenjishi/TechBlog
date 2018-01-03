@@ -13,7 +13,7 @@
 
 name | age
 ---- | ---
-LearnShare | 12
+<img src="https://github.com/chenjishi/TechBlog/blob/master/android7/pip2.png" height="640" width="360"/> | <img src="https://github.com/chenjishi/TechBlog/blob/master/android7/pip3.png" height="640" width="360"/>
 Mike |  32
 
 # Android架构概览
