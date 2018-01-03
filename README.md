@@ -20,6 +20,7 @@
 PIP模式为多窗口模式的一种特例，之前应用于Android TV系统上，API26将其引入手机平台，主要应用于视频的播放(其他场景比如Google Maps的导航小窗口，用户浏览其他app时候，导航小窗口可以一直显示)，系统默认在屏幕右下角显示视频的小窗口，可以调节窗口比例，用户可以随意拖动小窗口到任意位置，这个小窗口位于最顶层，所有在小窗口发生的触摸事件均不会向下面的Activity传导，用户触摸小窗口默认会显示一个“放大”和“关闭”的按钮。
 
 **用法：**
+
 PIP默认不开启，需要在manifest注册
 ```
 android:supportsPictureInPicture="true"
@@ -29,6 +30,8 @@ android:supportsPictureInPicture="true"
 ```
 getActivity().enterPictureInPictureMode()
 ```
+
+通过PictureInPitureParams进行PIP的调整，比如视频比例的更新，用户点击home或者recent按钮，或者进入、退出PIP模式Activity或者Fragment都会有回调，通知用户更新UI。处于PIP模式的时候系统会调用Activity的onPause方法，此时不应该暂停视频播放，真正暂停或者恢复播放的时机应该是在onStop和onStart方法里面，如果非要在onPause的时候暂停，需要调用isInPictureInPictureMode方法判断当前是否在PIP模式。
 
 
 
