@@ -8,7 +8,7 @@
 ### 1)画中画模式
 <p align="center">
   <img src="https://developer.android.com/images/pip.gif" 
-  alt="usite" height="990" width="500"/>
+  alt="usite" height="495" width="250"/>
 </p>
 
 
