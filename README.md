@@ -8,6 +8,7 @@
 ### 1)画中画模式
 <img src="https://developer.android.com/images/pip.gif" height="495" width="250"/>
 <img src="https://github.com/chenjishi/TechBlog/blob/master/android7/pip2.png" height="640" width="360"/> | <img src="https://github.com/chenjishi/TechBlog/blob/master/android7/pip3.png" height="640" width="360"/>
+
 底下是Activity | 横屏模式
 
 # Android架构概览
