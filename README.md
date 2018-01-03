@@ -7,7 +7,7 @@
 
 ### 1)画中画模式
 <p align="center">
-  <img src="https://github.com/chenjishi/TechBlog/blob/master/mvc.png?raw=true" 
+  <img src="https://developer.android.com/images/pip.gif" 
   alt="usite" height="500" width="990"/>
 </p>
 
