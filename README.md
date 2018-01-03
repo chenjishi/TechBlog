@@ -38,7 +38,7 @@ getActivity().enterPictureInPictureMode()
 
 * Notification dots
 
-<img src="https://developer.android.com/images/ui/notifications/badges-3.png">
+<img src="https://developer.android.com/images/ui/notifications/badges-3.png" width="396" height="355">
 
 
 
