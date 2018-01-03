@@ -12,6 +12,9 @@
 ---- | ---
 <img src="https://github.com/chenjishi/TechBlog/blob/master/android7/pip2.png" height="640" width="360"/> | <img src="https://github.com/chenjishi/TechBlog/blob/master/android7/pip3.png" height="640" width="360"/>
 
+横屏状态
+<img src="https://github.com/chenjishi/TechBlog/blob/master/android7/pip4.png" height="360" width="640"/>
+
 
 # Android架构概览
 
