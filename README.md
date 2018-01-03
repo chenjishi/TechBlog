@@ -6,6 +6,10 @@
 ## 8.0
 
 ### 1)画中画模式
+<p align="center">
+  <img src="https://github.com/chenjishi/TechBlog/blob/master/mvc.png?raw=true" 
+  alt="usite" height="500" width="990"/>
+</p>
 
 
 
