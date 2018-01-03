@@ -38,7 +38,7 @@ getActivity().enterPictureInPictureMode()
 
 * Notification dots，桌面图标支持通过app icon显示小圆点来显示是否有通知，长按app icon可以预览通知，支持文件夹显示通知小圆点，支持预览时通知数量的自定义，一般用于显示很重要的通知（不重要的通知显示小圆点无意义）。
 
-<img src="https://developer.android.com/images/ui/notifications/badges-3.png" width="396" height="355">
+<img src="https://developer.android.com/images/ui/notifications/badges-3.png" width="396" height="355"/>
 
 * 可以设置通知超时时间，到期自动消失，在此之前开发者也可以消失通知。
 
@@ -46,7 +46,7 @@ getActivity().enterPictureInPictureMode()
 
 ### 2)Auto Fill
 
-<img src="https://raw.githubusercontent.com/googlesamples/android-AutofillFramework/master/screenshots/2_SampleLoginEditTexts.png" width="270" height="480">
+<img src="https://raw.githubusercontent.com/googlesamples/android-AutofillFramework/master/screenshots/2_SampleLoginEditTexts.png" width="270" height="480"/>
 
 系统级服务，表单自动填写，节省时间，减少输入错误。
 * 支持重要性级别标识，比如验证码之类的可以标记为不自动填写，其他的用户名或者信用卡号等等还可以通过标记字段让系统自动区分。
@@ -55,7 +55,10 @@ getActivity().enterPictureInPictureMode()
 
 ### 2)Downloadable fonts
 可下载字体，不需要将字体打包进apk，同时还可以实现多app共享字体，Android Support Library 26也支持此特性。
-<img src="https://developer.android.com/guide/topics/ui/images/look-and-feel/downloadable-fonts/downloadable-fonts-process.png" width="371" height="355">
+<img src="https://developer.android.com/guide/topics/ui/images/look-and-feel/downloadable-fonts/downloadable-fonts-process.png" width="371" height="355"/>
+
+xml可以通过android:fontFamily设置字体。
+
 
 
 
