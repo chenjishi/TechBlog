@@ -34,6 +34,11 @@ getActivity().enterPictureInPictureMode()
 通过PictureInPitureParams进行PIP的调整，比如视频比例的更新，用户点击home或者recent按钮，或者进入、退出PIP模式Activity或者Fragment都会有回调，通知用户更新UI。处于PIP模式的时候系统会调用Activity的onPause方法，此时不应该暂停视频播放，真正暂停或者恢复播放的时机应该是在onStop和onStart方法里面，如果非要在onPause的时候暂停，需要调用isInPictureInPictureMode方法判断当前是否在PIP模式。
 
 ### 2)Notification Channel
+* 可以单独设置Notification Channel，以channel id识别，每一个channel可以设置不同的行为模式，比如震动模式，声音，闪光灯颜色等等。还可以根据category设置不同channel notification的样式，并且每一个channel都可以让用户单独进入系统设置进行行为的设置，应用场景比如说聊天app，每个人的会话通知可以设置为同一个channel id。
+
+* Notification dots
+
+<img src="https://developer.android.com/images/ui/notifications/badges-3.png">
 
 
 
