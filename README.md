@@ -9,6 +9,15 @@
 <p align="left">
   <img src="https://developer.android.com/images/pip.gif" height="495" width="250"/>
 </p>
+<p align="left">
+  <img src="https://github.com/chenjishi/TechBlog/blob/master/android7/pip2.png" height="640" width="360"/>
+</p>
+<p align="center">
+  <img src="https://github.com/chenjishi/TechBlog/blob/master/android7/pip3.png" height="640" width="360"/>
+</p>
+<p align="right">
+  <img src="https://github.com/chenjishi/TechBlog/blob/master/android7/pip4.png" height="640" width="360"/>
+</p>
 
 
 
