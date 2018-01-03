@@ -36,7 +36,7 @@ getActivity().enterPictureInPictureMode()
 ### 2)Notification Channel
 * 可以单独设置Notification Channel，以channel id识别，每一个channel可以设置不同的行为模式，比如震动模式，声音，闪光灯颜色等等。还可以根据category设置不同channel notification的样式，并且每一个channel都可以让用户单独进入系统设置进行行为的设置，应用场景比如说聊天app，每个人的会话通知可以设置为同一个channel id。
 
-* Notification dots
+* Notification dots，桌面图标支持通过app icon显示小圆点来显示是否有通知，长按app icon可以预览通知，支持文件夹显示通知小圆点，支持预览时通知数量的自定义，一般用于显示很重要的通知（不重要的通知显示小圆点无意义）。
 
 <img src="https://developer.android.com/images/ui/notifications/badges-3.png" width="396" height="355">
 
