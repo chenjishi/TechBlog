@@ -11,6 +11,11 @@
 
 底下是Activity | 横屏模式
 
+name | age
+---- | ---
+LearnShare | 12
+Mike |  32
+
 # Android架构概览
 
 ## 1.MVC
