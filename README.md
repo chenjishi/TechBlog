@@ -61,10 +61,22 @@ xml可以通过android:fontFamily设置字体。
 
 ### 5)Adaptive Icons
 
-可以对不同的设备设置不同的图标样式，比如有的机型可以设置成圆形图标，有的可以设置方形图标，并且支持图标动画。
+可以对不同的设备设置不同的图标样式，比如有的机型可以设置成圆形图标，有的可以设置方形图标，并且支持图标动画，支持快捷方式。
 
 <img src="https://developer.android.com/guide/practices/ui_guidelines/images/Single_Icon_Parallax_Demo_01_2x_ext.gif"
 width="311" height="311"/>
+
+### 6)快捷方式
+Android7.0后分为三种快捷方式：
+* static shortcuts
+
+* dynamic shortcuts
+
+* pinned shortcuts(8.0)
+
+<img src="https://developer.android.com/images/guide/topics/ui/shortcuts/pinned-shortcuts.png" width="421" height="355"/>
+
+
 
 
 
