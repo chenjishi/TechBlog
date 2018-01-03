@@ -53,6 +53,11 @@ getActivity().enterPictureInPictureMode()
 * 支持自定义View接入Auto Fill服务。
 * 支持网站数据和app数据联通。
 
+### 2)Downloadable fonts
+可下载字体，不需要将字体打包进apk，同时还可以实现多app共享字体，Android Support Library 26也支持此特性。
+<img src="https://developer.android.com/guide/topics/ui/images/look-and-feel/downloadable-fonts/downloadable-fonts-process.png" width="371" height="355">
+
+
 
 
 
