@@ -68,19 +68,21 @@ width="311" height="311"/>
 
 ### 6)快捷方式
 Android7.0后分为三种快捷方式：
-* static shortcuts
+* static shortcuts,跟apk打包在一起，无法修改，除非升级。
 
-* dynamic shortcuts
+* dynamic shortcuts，可以在运行时更新、删除，数量有限制，static和dynamic的快捷方式最多五个。
 
-* pinned shortcuts(8.0)
+* pinned shortcuts(8.0)运行时添加，无数量限制，创建时需要用户手动确认。
 
 <img src="https://developer.android.com/images/guide/topics/ui/shortcuts/pinned-shortcuts.png" width="421" height="355"/>
 
-
-
-
-
-
+### 7)其他
+* 多显示器支持，如果Activity支持Multi-window模式则默认支持多显示器。
+* xml引入layout_marginVertical，layout_marginHorizontal支持同时设置两边的margin,padding同理。
+* 支持app类别的设置，便于用户对app进行类别管理分组。
+* AnimatorSet支持seeking和reverse，即动画可以定位到任意时间位置、可以反向播放。
+* 智能分享，app分享时，系统根据内容（图片，音频，链接等等）寻找合适的app处理分享的内容。
+* Wi-Fi Aware，对有此硬件的手机，无需有网络连接即可进行通信。
 
 
 # Android架构概览
