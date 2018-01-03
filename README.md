@@ -6,12 +6,10 @@
 ## 8.0
 
 ### 1)画中画模式
-<p align="center">
-  <img src="https://developer.android.com/images/pip.gif" 
-  alt="usite" height="495" width="250"/>
+<p align="left">
+  <img src="https://developer.android.com/images/pip.gif" height="495" width="250"/>
 </p>
-![alt text](https://developer.android.com/images/pip.gif)
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
 
 
 
