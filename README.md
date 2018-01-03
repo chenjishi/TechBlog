@@ -40,6 +40,19 @@ getActivity().enterPictureInPictureMode()
 
 <img src="https://developer.android.com/images/ui/notifications/badges-3.png" width="396" height="355">
 
+* 可以设置通知超时时间，到期自动消失，在此之前开发者也可以消失通知。
+
+* 支持通知栏背景颜色设置，比如一些紧急通知可以设置颜色与其他普通通知区分开来。
+
+### 2)Auto Fill
+
+<img src="https://raw.githubusercontent.com/googlesamples/android-AutofillFramework/master/screenshots/2_SampleLoginEditTexts.png" width="270" height="480">
+
+系统级服务，表单自动填写，节省时间，减少输入错误。
+* 支持重要性级别标识，比如验证码之类的可以标记为不自动填写，其他的用户名或者信用卡号等等还可以通过标记字段让系统自动区分。
+* 支持自定义View接入Auto Fill服务。
+* 支持网站数据和app数据联通。
+
 
 
 
