@@ -17,6 +17,8 @@
 <img src="https://github.com/chenjishi/TechBlog/blob/master/android7/pip4.png" height="360" width="640"/>
 </p>
 
+PIP模式为多窗口模式的一种特例，之前应用于Android TV系统上，API26将其引入手机平台，系统默认在屏幕右下角显示视频的小窗口，可以调节窗口比例，用户可以随意拖动小窗口到任意位置，这个小窗口位于最顶层，所有在小窗口发生的触摸事件均不会向下面的Activity传导，用户触摸小窗口默认会显示一个“放大”和“关闭”的按钮。
+
 
 # Android架构概览
 
