@@ -3,6 +3,9 @@
 # 7.0
 ## 主要变化
 
+### 1)引入Doze模式，延长电池续航时间，减少内存占用。
+<img src="https://developer.android.com/images/android-7.0/doze-diagram-1.png"/>
+
 
 
 
