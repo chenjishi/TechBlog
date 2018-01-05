@@ -53,6 +53,27 @@ RC4 cipher不再提供，启用新的CHACHA20-POLY1305 cipher suites。
 
 * 不再提供Crypto加密，Crypto基于SHA1PRNG算法，此算法加密性能太弱，用户可以选择其他加密方式。
 
+## 新特性
+
+### 1）多窗口支持
+<img src="https://developer.android.com/images/android-7.0/mw-portrait.png">
+
+用户可以在一个页面同时开两app，并且可以移动缩放任意app。
+
+### 2）通知加强
+* 通知样式模板更新。
+* 通知样式自定义。
+* 通知分组支持，按组显示，按组删除或者管理。
+* 直接回复，比如及时通讯app可以在通知栏直接回复。
+
+### 3）Just In Time（JIT）
+主要是优化app运行速度
+
+### 4）Doze加强
+
+### 5）SurfaceView
+
+
 
 
 # 8.0
@@ -77,9 +98,47 @@ RC4 cipher不再提供，启用新的CHACHA20-POLY1305 cipher suites。
 
 ### 3)快捷方式
 * com.android.launcher.action.INSTALL_SHORTCUT广播不再生效，目前已作为私有广播。需要使用ShortcutManager的requestPinShortcut()创建快捷方式。
-*  ACTION_CREATE_SHORTCUT intent
+* ACTION_CREATE_SHORTCUT intent可以通过ShortcutManager创建快捷方式，同时也支持之前版本laucher icon的创建，之前这个intent只适用于老版本的laucher icon创建。
+* 通过requestPinShortcut()方式创建的快捷方式目前可以使用ShortcutManager更新。
+* 之前的快捷方式仍维持现有功能，但是新版本可以将其手动转换成app shortcut。
 
+### 4）Locales
+Local.getDefault()需要替换成Locale.getDefault(Category.DISPLAY)。应用于方法Currency.getDisplayName(),Currency.getSymbol(),
+Locale.getDispalyScript()。
+Currency.getDisplayName(null)会抛NullPointerException异常。
 
+### 5）警告弹窗
+TYPE_PHONE,TYPE_PRIORITY_PHONE,TYPE_SYSTEM_ALERT,TYPE_SYSTEM_OVERLAY,TYPE_SYSTEM_ERROR类型弹窗会始终位于TYPE_APPLICATION_OVERLAY类型下方，如果target api>=27，请使用TYPE_APPLICATION_OVERLAY类型弹窗。
+
+### 6）输入和导航
+作为外设的键盘现在支持app内导航，比如通过箭头或者tab键。如果View未设置高亮状态，系统会自动在获取焦点时加水纹效果的高亮显示，当然如果不需要也可以通过xml设置，如果要测试app对键盘导航的支持，可以通过设置的Drawing>Show layout bounds查看，对于处在焦点的控件会显示"X"标记。
+
+### 7）网页的自动填充功能
+WebSettings的getSaveFormData()现在返回fasle，之前返回true，同时setSaveFormData()不再生效。
+WebViewDatabase的clearFormData()不再生效，hasFormData()返回fasle，之前有表单数据的情况下会返回true。
+
+### 8）网络
+* 不带body的OPTIONS请求里面现在会有个Content-Length:0的头字段。之前没有此字段。
+* HttpURLConnection会自动格式化URL，将空的路径以/代替，例如http://example.com 格式化成http://exaple.com/。
+* URL不可以包含空标签(empty labels，之前版本hostname是可以带的，但是这种形式的URL是不规范的，所以8.0以后不再允许这样的URL)
+* HttpsURLConnection不再执行非安全的TLS/SSL协议。
+
+### 9）WIFI连接
+稳定性和可靠性提供，更直观更容易理解的WIFI设置UI，单独的WIFI设置菜单，兼容设备会自动连接附近质量更高的热点。
+
+### 10）安全
+* 不再支持SSLv3
+* 当服务器没有正确完善TLS协议的情况下，HttpsURLConnection不再执行连接建立。
+* WebView可以在多个多个进程工作了。
+对于未知来源过来的未知app而言，增加了安全性。之前的INSTALL_NON_MARKET_APPS目前始终为1，可以通过canReqeustPackageInstalls()方法来判断是否可安装。如果想通过setSecureSettings()来改变INSTALL_NON_MARKET_APPS的值会抛异常。
+
+### 11）findViewById()
+此方法不再返回View实例，返回的是<T extends View>，也就是说不再需要强转了。。。。。（好api!）。
+ 
+### 12）通讯录
+对于TIMES_CONTACTED，TIMES_USED,LAST_TIME_CONTACTED,LAST_TIME_USED信息，系统不再返回精确数据，只是给一个近似数据，精确数据由系统内部维护。
+
+## 新特性
 
 ### 1)画中画模式
 <img src="https://developer.android.com/images/pip.gif" height="495" width="250"/>
