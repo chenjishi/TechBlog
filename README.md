@@ -6,6 +6,22 @@
 ### 1)引入Doze模式，延长电池续航时间，减少内存占用。
 <img src="https://developer.android.com/images/android-7.0/doze-diagram-1.png"/>
 
+当手机未接电源并且屏幕关闭一段时间后，系统进入Doze模式，关闭所有网络连接，延迟执行所有的任务和同步工作，当手机静止不动并且此时已进入Doze模式一段时间后，系统会更进一步地限制PowerManger.WakeLock,AlarmManger，GPS,WIFI扫描活动，在Doze期间系统会周期性地开启一个短的维护时间窗口，在此期间app可以允许网络连接或者同步工作，此后再次进入睡眠模式。
+
+### 2）后台优化
+移除了3个广播Action，优化电池消耗和内存占用。
+* CONNECZZTIVITY_ACTION，网络切换会很频繁，比如WIFI和数据流量的切换也会唤醒，注册此Action的app会频繁唤醒去处理接收到的广播。
+* ACTION_NEW_PICTURE和ACTION_NEW_VIDEO，用户拍照或者拍摄视频触发，会频繁唤醒所有注册的app。
+
+### 3）权限变化，收紧了app私有文件的访问权限
+* 私有文件权限不再由开发者控制，任何视图通过对私有文件设置MODE_WORLD_READABLE或者MODE_WORLD_WRITEABLE的操作都会触发SecurityException。
+* app外通过file://URI 的形式发送文件会导致接受者收到的是无法访问的文件，因此通过file://URI 的形式发送文件会触发FileUriExposedException，推荐的方式是通过FileProvider分享文件。
+* DownloadManager无法通过文件名分享私有文件。访问COLUM_LOCAL_FILENAME会触发SecurtiyException。推荐的方式是通过ContentResolver.openFileDescriptor()打开。
+
+### 4）app间文件分享
+禁止通过file://URI 方式分享文件，会触发FileUriExposedException。推荐使用content://URI 的方式。
+
+
 
 
 
