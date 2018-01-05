@@ -21,8 +21,22 @@
 ### 4）app间文件分享
 禁止通过file://URI 方式分享文件，会触发FileUriExposedException。推荐使用content://URI 的方式。
 
+### 5）屏幕缩放功能
+可以在屏幕宽度大于sw320dp的手机上进行屏幕的缩放，主要是方便弱视用户使用手机。当用户启动缩放模式时，app会发生如下变化：
+* target api <= 23,所有app后台会被杀死，前台会收到configuration change，即跟手机横竖屏转换一样的事件。
+* target api >= 27,后台不杀死，前后台均收到configuration change
 
+### 6)NDK app动态链接库问题
+检查所有第三方so库或者本地Native代码，任何访问private NDK API而不是public NDK api的app都会crash。target api=27的app不允许访问private NDK API，第三方so库也不行。确保自身的native代码和任何第三方代码没有使用private NDK api。一般来说有三种情况:
+* app直接访问了private platform libraries，更改的方法是使用public ndk api或者将private ndk api直接拷贝到本地。
+* 第三方so库使用了private platform libraries,尽管自身的app未使用。
+* 引入的库未包含在apkn内。比如说licrypto.so，有的Android版本包含了，有的未包含（Android6.0以后不再提供,OpenSSL换成了BoringSSL,会导致之前的so不存在）。
 
+### 7）Retention注解
+7.0之前的注解VISIBILITY_BUILD和VISIBILITY_SYSTEM被忽略导致的bug，现已修复。通过使用@Retention(RetentionPolicy.RUNTIME)生效。
+
+### 8）TLS/SSL 默认配置变化
+RC4 cipher不再提供，启用新的CHACHA20-POLY1305 cipher suites。
 
 
 ## 8.0
