@@ -72,7 +72,13 @@ RC4 cipher不再提供，启用新的CHACHA20-POLY1305 cipher suites。
 ### 4）Doze加强
 
 ### 5）SurfaceView
+比TexureView更节电，推荐使用。
 
+### 6）增加节约数量流量的模式
+<img src="https://developer.android.com/images/android-7.0/datasaver.png">
+
+### 7)Vulkan API
+3D
 
 
 
