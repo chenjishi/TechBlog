@@ -1,7 +1,7 @@
 # Android7.0/8.0系统新特性介绍
 
 # 7.0
-## 主要变化
+## 行为变化
 
 ### 1)引入Doze模式，延长电池续航时间，减少内存占用。
 <img src="https://developer.android.com/images/android-7.0/doze-diagram-1.png"/>
@@ -55,7 +55,31 @@ RC4 cipher不再提供，启用新的CHACHA20-POLY1305 cipher suites。
 
 
 
-## 8.0
+# 8.0
+
+## 行为变化
+
+**影响所有app**
+### 1) 后台任务限制
+当app进入cached状态，并且没有任何活跃控件时，系统会释放app持有的任何wakelock。对于非前台任务，以下行为将受限制(target api>=26)：
+* 后台应用对于后台服务的访问将不再像之前那么能自由访问。
+* 大部分广播无法静态注册(即manifest注册的将不再生效)。
+* startService()会抛异常IllegalStateException，如果用户关闭了服务的创建设置。
+* 使用Context.startForegroundService()启动前台服务。如果需要调用startForeground()则必须在服务创建后的5秒钟以内。
+
+### 2）后台定位限制
+对于以下API将不会频繁收到更新：
+* Fused Location Provider
+* Geofencing
+* GNSS Measurements
+* Location Manager
+* Wi-Fi Manager
+
+### 3)快捷方式
+* com.android.launcher.action.INSTALL_SHORTCUT广播不再生效，目前已作为私有广播。需要使用ShortcutManager的requestPinShortcut()创建快捷方式。
+*  ACTION_CREATE_SHORTCUT intent
+
+
 
 ### 1)画中画模式
 <img src="https://developer.android.com/images/pip.gif" height="495" width="250"/>
