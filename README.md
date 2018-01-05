@@ -78,8 +78,46 @@ RC4 cipher不再提供，启用新的CHACHA20-POLY1305 cipher suites。
 <img src="https://developer.android.com/images/android-7.0/datasaver.png">
 
 ### 7)Vulkan API
-3D
+3D渲染api
 
+### 8）快速设置面板
+<img src="https://developer.android.com/images/android-7.0/quicksettings.png" width="296" height="354"/>
+目前提供了用户自定义模块，开发者可以将经常使用的操作的快捷方式放到此面板。
+
+### 9）号码拦截
+开放了新的api，同时还可以对短信等等拦截。
+
+### 10）来电
+* 可以拒接来电
+* 可以不允许通话记录写入
+* 可以不显示来电通知
+
+### 11）新的Emoji
+
+### 12）其他
+* Direct Boot
+手机重启到用户解锁这段时间，设置了这个模式的app可以访问一个特定的存储区域，从而app可以起来做一些操作，
+应用场景？用户手机丢失，捡到的人无法解锁，可以通过这个模式进行通信
+
+* Scoped Directory Access
+简单易用的外部文件访问接口，可以指定目录，比如picture,document,download等等，相比之前的READ_EXTERNAL_STORAGE
+和WRITE_EXTERNAL_STORAGE而言，范围没那么广，适合于app经常访问同一目录的情况，而且无需申请READ和WRITE权限。
+
+* VR支持
+
+# 7.1
+### 1）快捷方式
+<img src="https://developer.android.com/images/guide/topics/ui/shortcuts.png">
+
+### 2)键盘图片的支持
+之前只支持unicode的emojis，不支持富媒体。目前提供了Commit Content API，提供通用的方法通过键盘发送图片及其他富媒体文件。
+
+### 3）职业emoji
+<img src="https://developer.android.com/images/about/versions/nougat/new-emoji-7.1.png">
+
+### 4)圆形icon
+提供两套图标，正常的和圆形的，对于某些设备，可以使用圆形启动图标
+<img src="https://developer.android.com/images/about/versions/nougat/round-icon.png">
 
 
 # 8.0
