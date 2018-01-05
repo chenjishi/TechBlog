@@ -38,6 +38,22 @@
 ### 8）TLS/SSL 默认配置变化
 RC4 cipher不再提供，启用新的CHACHA20-POLY1305 cipher suites。
 
+### 9）其他变化
+* 系统为7.0但是target api <= 23用户改变了屏幕尺寸（启用了屏幕缩放模式），app的进程会被杀死，需针对这种情况做处理，否则用户从Recents按钮点击回来的时候会发生崩溃。
+
+* 7.0系统以前有个bug,严格模式下对在主线程执行的tcp socket未标记，目前系统已更改，在主线程执行网络访问会抛出NetworkOnMainThreadException。
+
+* Debug.startMethodTracing()等等方法目前会默认将结果存储到包名下面，无需app额外申请WRITE_EXTERNAL_STORAGE权限。
+
+* 使用Binder传递数据时，目前大部分api会执行payload检查，如果数据量过大会抛出TransactionTooLargeExceptions，之前版本只是打印log或者忽略。比如说Activity.onSaveInstanceState()，数据量过大会抛异常。
+
+* View未attached to window，此时给View执行了Runnable任务，目前会将此Runnable任务进入队列，等View attached的时候才会去执行。之前执行此种操作时会产生的问题是Runnable可能会执行在错误的线程上。
+
+* 注册了DELETE_PACKAGE在卸载其他包时，但是是其他app安装了这个包的情况下，系统会弹窗让用户确认。但是系统会发STATUS_PENDING_USER_ACTION告诉结果。
+
+* 不再提供Crypto加密，Crypto基于SHA1PRNG算法，此算法加密性能太弱，用户可以选择其他加密方式。
+
+
 
 ## 8.0
 
