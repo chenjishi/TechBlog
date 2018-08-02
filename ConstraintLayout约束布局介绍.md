@@ -184,6 +184,21 @@ ConstraintLayout的WRAP_CONTENT有个需要注意的地方，其他的布局如�
 
 <div align='center'><img src='https://developer.android.com/reference/android/support/constraint/resources/images/chains.png' width='325' height='90'/></div>
 
+链式布局通过头元素来控制其他元素的走向：
+
+<div align='center'><img src='https://developer.android.com/reference/android/support/constraint/resources/images/chains-head.png' width='400' height='59'/></div>
+
+水平方向位于最左边的为链头，竖直方向位于最顶端的为链头，通过设置layout_constraintHorizontal_chainStyle/layout_constraintVertical_chainStyle来实现。
+
+链式布局有如下几种样式：
+
+<div align='center'><img src='https://developer.android.com/reference/android/support/constraint/resources/images/chains-styles.png' width='600' height='270'/></div>
+
+默认为CHAIN_SPREAD，CHAIN_SPREAD_INSIDE的区别是两端不会留空隙，CHAIN_PACKED则中间不会留空隙，两边的空隙距离可以通过bias调整。默认情况下元素的尺寸均匀分布，比如几个元素都是MATCH_CONSTRAINT，那么几个元素的宽度都是一样的，我们可以使用layout_constraintHorizontal_weight/layout_constraintVertical_weight来改变这种状况，比如两个元素第一个weight=2第二个weight=1，那么第一个元素的宽度将会是第二个的2倍。
+
+另外需要注意的是在链式布局中margin值是累加的，比如在水平链式布局中，A元素margin_right=10, 与A相邻的另一个元素B的margin_left=5，那么AB直接的margin为15。
+
+
 
 
 
