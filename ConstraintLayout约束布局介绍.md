@@ -239,6 +239,8 @@ ConstraintLayout的WRAP_CONTENT有个需要注意的地方，其他的布局如�
 ```
 
 
+### Barrier
+
 
 
 
