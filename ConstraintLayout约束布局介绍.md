@@ -70,9 +70,19 @@ A被设置为GONE,B在重新布局的时候会往左偏移，占据A的位置，
 * layout_goneMarginBottom
 
 
+## * 居中和偏移
 
+居中：
 
+```
+<android.support.constraint.ConstraintLayout>
+             <Button android:id="@+id/button"
+                 app:layout_constraintLeft_toLeftOf="parent"
+                 app:layout_constraintRight_toRightOf="parent/>
+</>
 
+```
 
+效果如下：
 
-
+<div align='center'><img src='https://developer.android.com/reference/android/support/constraint/resources/images/centering-positioning.png' width='325' height='75'/></div>
