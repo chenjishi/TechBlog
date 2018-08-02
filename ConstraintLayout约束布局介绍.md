@@ -89,6 +89,3 @@ A被设置为GONE,B在重新布局的时候会往左偏移，占据A的位置，
 
 除非ConstraintLayout跟里面的Button尺寸一样，默认情况下Button都是居中的，可以想象Button两边各有一个弹簧在拉扯B，势均力敌，让B能一直保持在中间，竖直方向同理。
 
-当然
-除非ConstraintLayout跟里面的Button尺寸一样，默认情况下Button都是居中的，可以想象Button两边各有一个弹簧在拉扯B，势均力敌，让B能一直保持在中间，竖直方向同理。很多
-除非ConstraintLayout跟里面的Button尺寸一样，默认情况下Button都是居中的，可以想象Button两边各有一个弹簧在拉扯B，势均力敌，让B能一直保持在中间，竖直方向同
