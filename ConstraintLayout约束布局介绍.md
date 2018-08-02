@@ -202,13 +202,41 @@ ConstraintLayout的WRAP_CONTENT有个需要注意的地方，其他的布局如�
 ## * 辅助线
 
 ### Guideline
-虚拟的不可见的辅助线，用于元素参考定位：
+虚拟的不可见的辅助线，用于元素参考定位，可以水平方向也可以竖直方向，竖直的Guideline宽度为0高度为ConstraintLayout高度，水平的Guideline高度为0，宽度为ConstraintLayout的宽度。
 
 <div align='center'><img src='https://developer.android.com/training/constraint-layout/images/guideline-constraint_2x.png' width='418' height='218'/></div>
 
+有三种方式实现Guideline定位：
+1.layout_constraintGuide_begin：左边或者顶边距离
+2.layout_constraintGuide_end：右边或者底边距离
+3.layout_constraintGuide_percent：宽或者的比例
 
+```
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+    <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline"
+            app:layout_constraintGuide_begin="100dp"
+            android:orientation="vertical"/>
 
+    <Button
+            android:text="Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
+```
 
 
 
