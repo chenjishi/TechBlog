@@ -199,6 +199,14 @@ ConstraintLayout的WRAP_CONTENT有个需要注意的地方，其他的布局如�
 另外需要注意的是在链式布局中margin值是累加的，比如在水平链式布局中，A元素margin_right=10, 与A相邻的另一个元素B的margin_left=5，那么AB直接的margin为15。
 
 
+## * 辅助线
+
+### Guideline
+虚拟的不可见的辅助线，用于元素参考定位：
+
+<div align='center'><img src='https://developer.android.com/training/constraint-layout/images/guideline-constraint_2x.png' width='418' height='218'/></div>
+
+
 
 
 
