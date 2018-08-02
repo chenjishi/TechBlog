@@ -108,6 +108,25 @@ A被设置为GONE,B在重新布局的时候会往左偏移，占据A的位置，
 
 ## * 环形定位
 
+这种方式可以是一个元素绕着另一个元素呈圆形环绕，主要是通过半径和角度来确定俩元素的位置关系，有三个属性：
+
+* layout_constraintCircle : 参考元素的id
+* layout_constraintCircleRadius : 距离另一元素中心的距离
+* layout_constraintCircleAngle : 与另一元素的偏移角度(度数，0~360)
+
+```
+<Button android:id="@+id/buttonA"/>
+<Button android:id="@+id/buttonB"
+        app:layout_constraintCircle="@+id/buttonA"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintCircleAngle="45" />
+```
+
+实现效果如下：
+
+<div align='center'><img src='https://developer.android.com/reference/android/support/constraint/resources/images/circle2.png' width='325' height='325'/></div>
+
+
 
 
 
