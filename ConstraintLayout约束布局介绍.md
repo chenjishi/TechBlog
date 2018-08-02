@@ -108,6 +108,8 @@ A被设置为GONE,B在重新布局的时候会往左偏移，占据A的位置，
 
 ## * 环形定位
 
+<div align='center'><img src='https://developer.android.com/reference/android/support/constraint/resources/images/circle1.png' width='325' height='325'/></div>
+
 这种方式可以是一个元素绕着另一个元素呈圆形环绕，主要是通过半径和角度来确定俩元素的位置关系，有三个属性：
 
 * layout_constraintCircle : 参考元素的id
@@ -125,6 +127,68 @@ A被设置为GONE,B在重新布局的时候会往左偏移，占据A的位置，
 实现效果如下：
 
 <div align='center'><img src='https://developer.android.com/reference/android/support/constraint/resources/images/circle2.png' width='325' height='325'/></div>
+
+
+## * 尺寸约束
+
+在ConstraintLayout尺寸为WRAP_CONTENT的情况下， 我们可以定义ConstraintLayout的最大和最小尺寸，共有四个：
+
+* android:minWidth
+* android:minHeight
+* android:maxWidth
+* android:maxHeight
+
+对于ConstraintLayout里面的元素来说，有三种方式设置尺寸，定值(123dp)，WRAP_CONTENT， 0dp(跟MATCH_CONSTRAINT一样的效果)。
+
+注意：不推荐使用MATCH_PARENT，而应该使用MATCH_CONSTRAINT结合"parent"的left/right/top/bottom位置。
+
+ConstraintLayout的WRAP_CONTENT有个需要注意的地方，其他的布局如果设置了WRAP_CONTENT，意味着元素可以想多大就多大，超过父元素也可以，但是有些情况下我们需要对WRAP_CONTENT进行约束，让其不超过ConstraintLayout的大小，可以进行如下属性设置：
+* app:layout_constrainedWidth=”true|false”
+* app:layout_constrainedHeight=”true|false”
+
+如果元素尺寸设置为MATCH_CONSTRAINT，则意味着元素会占据整个布局所有可用的空间，但是可以对这个元素进行最大最小尺寸的限定：
+
+* layout_constraintWidth_min/layout_constraintHeight_min:最小宽高限定
+* layout_constraintWidth_max/layout_constraintHeight_max:最大宽高限定
+* layout_constraintWidth_percent/layout_constraintHeight_percent:根据比例进行宽高限定
+
+根据比例设定宽高的时候，width或者height必须为MATCH_CONSTRAINT并且需要设置app:layout_constraintWidth_default="percent"或者 app:layout_constraintHeight_default="percent"，同时layout_constraintWidth_percent/layout_constraintHeight_percent的值应该为0~1之间。
+
+## * 比例
+
+可以让宽根据高的比例来确定或者让高根据宽的比例来确定，如果使用这种模式必须保证宽/高至少有一个为0dp(MATCH_CONSTRAINT)，并且设定layout_constraintDimensionRatio的值为两者的比例，值的类型可以为float型，代表width和height的比例，或者以width:height的形式：
+
+```
+<Button android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1" />
+```
+这个会让宽高大小一样。
+
+当然如果width和height都为0dp(MATCH_CONSTRAINT)，同样可以通过比例来确定width和height，系统会选取最大尺寸的一边作为约束，从而使另一边根据比例进行约束，如果你想人为限定width或者height，可以在比例前加W或者H的前缀来限定宽或者高，以逗号跟后面的比例隔开：
+
+```
+<Button android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="H,16:9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+```
+
+这种情况会让width占据整个ConstraintLayout的宽度，高度根据16：9的比例来确定。
+
+
+## * 链式布局
+
+一个很重要的概念，应用在一组元素上面。链可以水平方向布局也可以竖直方向布局。元素之间通过双向连接实现链式布局。
+
+<div align='center'><img src='https://developer.android.com/reference/android/support/constraint/resources/images/chains.png' width='325' height='90'/></div>
+
+
+
+
+
+
 
 
 
