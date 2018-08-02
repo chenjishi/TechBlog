@@ -241,6 +241,31 @@ ConstraintLayout的WRAP_CONTENT有个需要注意的地方，其他的布局如�
 
 ### Barrier
 
+跟Guideline一样是虚拟不可见的，与其不同的是Barrier没有自己的位置，Barrier应用于一组元素，根据元素的情况移动
+
+
+<div align='center'><img src='https://developer.android.com/reference/android/support/constraint/resources/images/barrier-buttons.png' width='325' height='151'/></div>
+
+上图中我们有两个按钮button1和button2，我们加入一个Barrier
+
+```
+ <android.support.constraint.Barrier
+              android:id="@+id/barrier"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              app:barrierDirection="start"
+              app:constraint_referenced_ids="button1,button2" />
+```
+方向设置为start，我们得到如下效果：
+<div align='center'><img src='https://developer.android.com/reference/android/support/constraint/resources/images/barrier-start.png' width='325' height='158'/></div>
+
+相反地，如果我们设置为end,则Barrier跑到后边去了：
+<div align='center'><img src='https://developer.android.com/reference/android/support/constraint/resources/images/barrier-end.png' width='325' height='158'/></div>
+
+
+
+
+
 
 
 
