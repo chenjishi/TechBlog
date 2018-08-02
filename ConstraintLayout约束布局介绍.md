@@ -11,6 +11,8 @@ ConstraintLayout的使用。
 * 水平方向：left, right, start, end
 * 竖直方向：top, bottom, text baseline
 
+ConstraintLayout里面的元素水平方向和竖直方向必须有至少一个约束条件，这样才能水平和竖直方向确定元素的位置。
+
 元素位置关系模型：
 
 <div align='center'><img src='https://developer.android.com/reference/android/support/constraint/resources/images/relative-positioning-constraints.png' width='350' height='90'/></div>
