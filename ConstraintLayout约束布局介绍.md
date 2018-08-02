@@ -87,5 +87,32 @@ A被设置为GONE,B在重新布局的时候会往左偏移，占据A的位置，
 
 <div align='center'><img src='https://developer.android.com/reference/android/support/constraint/resources/images/centering-positioning.png' width='325' height='75'/></div>
 
-除非ConstraintLayout跟里面的Button尺寸一样，默认情况下Button都是居中的，可以想象Button两边各有一个弹簧在拉扯B，势均力敌，让B能一直保持在中间，竖直方向同理。
+除非ConstraintLayout跟里面的Button尺寸一样，默认情况下Button都是居中的，两边各50%，可以想象Button两边各有一个弹簧在拉扯B，势均力敌，让B能一直保持在中间，竖直方向同理。
+
+当然很多情况下，我们并不总是希望元素居中，这时候偏移属性就派上用场了，有两个偏移属性，分为水平和竖直方向：
+
+* layout_constraintHorizontal_bias
+* layout_constraintVertical_bias
+
+```
+<android.support.constraint.ConstraintLayout>
+             <Button android:id="@+id/button"
+                 app:layout_constraintHorizontal_bias="0.3"
+                 app:layout_constraintLeft_toLeftOf="parent"
+                 app:layout_constraintRight_toRightOf="parent/>
+</>
+```
+<div align='center'><img src='https://developer.android.com/reference/android/support/constraint/resources/images/centering-positioning-bias.png' width='325' height='75'/></div>
+这个布局代表左边占30%右边占70%
+
+
+## * 环形定位
+
+
+
+
+
+
+
+
 
