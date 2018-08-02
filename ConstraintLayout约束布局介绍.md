@@ -266,7 +266,7 @@ ConstraintLayout的WRAP_CONTENT有个需要注意的地方，其他的布局如�
 
 <div align='center'><img src='https://developer.android.com/reference/android/support/constraint/resources/images/barrier-adapt.png' width='325' height='174'/></div>
 
-总而言之，Barrier总是会找一组元素中最极端的尺寸(最宽的宽或者最高的高)去贴近，同意Barrier可以作为其他元素的参考线：
+总而言之，Barrier总是会找一组元素中最极端的尺寸(最宽的宽或者最高的高)去贴近，同样Barrier也可以作为其他元素的参考线：
 
 <div align='center'><img src='https://developer.android.com/training/constraint-layout/images/barrier-constraint_2x.png' width='418' height='438'/></div>
 
