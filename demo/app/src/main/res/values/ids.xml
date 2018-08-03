@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="free_wifi_found" type="id"/>
+    <item name="weather_icon" type="id"/>
+    <item name="weather_layout" type="id"/>
+    <item name="weather_error" type="id"/>
+    <item name="temperature" type="id"/>
+    <item name="slash" type="id"/>
+    <item name="city" type="id"/>
+    <item name="air_condition" type="id"/>
+    <item name="weather" type="id"/>
+    <item name="air_index" type="id"/>
+    <item name="btn_download" type="id"/>
+</resources>
