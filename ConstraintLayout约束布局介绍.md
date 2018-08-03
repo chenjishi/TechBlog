@@ -273,7 +273,9 @@ ConstraintLayout的WRAP_CONTENT有个需要注意的地方，其他的布局如�
 <div align='center'><img src='https://developer.android.com/training/constraint-layout/images/barrier-constraint_2x.png' width='418' height='438'/></div>
 
 
+## Demo
 
+展示了天气模块的使用ConstraintLayout的示例代码，将原有的嵌套层级4层减少到目前的1层。
 
 
 
