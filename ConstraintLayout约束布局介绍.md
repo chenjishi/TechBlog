@@ -277,9 +277,15 @@ ConstraintLayout的WRAP_CONTENT有个需要注意的地方，其他的布局如�
 
 展示了天气模块的使用ConstraintLayout的示例代码，将原有的嵌套层级4层减少到目前的1层。
 
+[XML方式](https://github.com/chenjishi/TechBlog/blob/master/demo/app/src/main/res/layout/layout_constraint_layout.xml)
+
+
+[代码方式](https://github.com/chenjishi/TechBlog/blob/master/demo/app/src/main/java/com/miscell/demo/MainActivity.java)
 
 
 
+
+<div align='center'><img src='https://github.com/chenjishi/TechBlog/blob/master/weather_layout.png' width='540' height='960'/></div>
 
 
 
